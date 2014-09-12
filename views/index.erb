@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<script src="/javascript/jquery.js"></script>
+		<script src="/javascript/rails.js"></script>
+		<script src="/javascript/layout.js"></script>
+		<link href="/stylesheet/layout.css" media="all" rel="stylesheet" type="text/css"></link>
+	</head>
+
+	<body>
+		<div class="logo">
+			<img src="/images/logo.png" />
+		</div>
+		
+		<h1>I challenge you to create a game mixing...</h1>
+
+		<div class="roms">
+			<% [@rom1, @rom2, @rom3].each do |selected_rom|%>
+				<div class="rom">
+					<p class="images">
+						<img src="<%= selected_rom[:images][1] %>" class="first-image" />
+						<img src="<%= selected_rom[:images][0] %>" />
+					</p>
+					<h2><%= selected_rom[:name] %></h2>
+
+					<h3><a target="_blank" data-method="post" href="http://coolrom.com/search?q=<%= selected_rom[:name].gsub(' ', '+').gsub('(', '').gsub(')', '')%>">download the game</a></h3>
+				</div>
+			<%end%>
+			
+			<div class="clear"></div>
+		</div>
+	</body>
+</html>

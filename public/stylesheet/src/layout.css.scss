@@ -1,0 +1,55 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+body {
+  margin:0px;
+  padding:0px;
+  font-family: "Raleway", Arial;
+  letter-spacing:-1px;
+}
+
+h1 {
+  text-align:center;
+}
+
+h2 {
+  font-size:16px;
+}
+
+.logo {
+  text-align:center;
+  background-color:#000;
+  
+  img {
+  }
+}
+
+.images {
+  width:260px;
+  margin:0 auto;
+  
+  img {
+    display:block;
+  }
+  
+  .first-image {
+    position:absolute;
+  } 
+}
+
+.roms {
+  width:1140px;
+  margin:0 auto;
+  .rom {
+    padding-top:30px;
+    text-align:center;
+    width:360;
+    float:left;
+    background-color:#eee;
+    margin:0px 10px;
+    min-height:400px;
+  }
+}
+
+.clear {
+  clear:both;
+}
