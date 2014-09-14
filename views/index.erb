@@ -15,15 +15,28 @@
 
 		<div class="roms">
 			<% [@rom1, @rom2, @rom3].each do |selected_rom|%>
-				<div class="rom">
-					<p class="images">
-						<img src="<%= selected_rom[:images][1] %>" class="first-image" />
-						<img src="<%= selected_rom[:images][0] %>" />
-					</p>
-					<h2><%= selected_rom[:name] %></h2>
+			
+				<% if selected_rom.type == 'book' %>
+					<div class="book">
+						<p class="images">
+							<img src="<%= selected_rom.images[1] %>" class="first-image" />
+							<img src="<%= selected_rom.images[0] %>" />
+						</p>
+						<h2><%= selected_rom.name %></h2>
 
-					<h3><a target="_blank" data-method="post" href="http://coolrom.com/search?q=<%= selected_rom[:name].gsub(' ', '+').gsub('(', '').gsub(')', '')%>">download the game</a></h3>
-				</div>
+						<h3><a target="_blank" href="<%= selected_rom.link %>">buy the book</a></h3>
+					</div>
+				<% else %>
+					<div class="rom">
+						<p class="images">
+							<img src="<%= selected_rom.images[1] %>" class="first-image" />
+							<img src="<%= selected_rom.images[0] %>" />
+						</p>
+						<h2><%= selected_rom.name %></h2>
+
+						<h3><a target="_blank" data-method="post" href="<%= selected_rom.link %>">download the game</a></h3>
+					</div>
+				<% end %>
 			<%end%>
 			
 			<div class="clear"></div>

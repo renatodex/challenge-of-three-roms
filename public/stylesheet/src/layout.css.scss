@@ -23,23 +23,10 @@ h2 {
   }
 }
 
-.images {
-  width:260px;
-  margin:0 auto;
-  
-  img {
-    display:block;
-  }
-  
-  .first-image {
-    position:absolute;
-  } 
-}
-
 .roms {
   width:1140px;
   margin:0 auto;
-  .rom {
+  .rom, .book {
     padding-top:30px;
     text-align:center;
     width:360;
@@ -47,6 +34,31 @@ h2 {
     background-color:#eee;
     margin:0px 10px;
     min-height:400px;
+    
+    .images {
+      margin:0 auto;
+
+      img {
+        display:block;
+        height:250px;
+      }
+
+      .first-image {
+        position:absolute;
+      } 
+    }
+  }
+  
+  .rom {
+    .images {
+      width:260px;
+    }
+  }
+  
+  .book {
+    .images {
+      width:160px;
+    }
   }
 }
 

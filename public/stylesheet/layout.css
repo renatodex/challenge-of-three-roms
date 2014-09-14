@@ -15,18 +15,10 @@ h2 {
   text-align: center;
   background-color: #000; }
 
-.images {
-  width: 260px;
-  margin: 0 auto; }
-  .images img {
-    display: block; }
-  .images .first-image {
-    position: absolute; }
-
 .roms {
   width: 1140px;
   margin: 0 auto; }
-  .roms .rom {
+  .roms .rom, .roms .book {
     padding-top: 30px;
     text-align: center;
     width: 360;
@@ -34,6 +26,17 @@ h2 {
     background-color: #eee;
     margin: 0px 10px;
     min-height: 400px; }
+    .roms .rom .images, .roms .book .images {
+      margin: 0 auto; }
+      .roms .rom .images img, .roms .book .images img {
+        display: block;
+        height: 250px; }
+      .roms .rom .images .first-image, .roms .book .images .first-image {
+        position: absolute; }
+  .roms .rom .images {
+    width: 260px; }
+  .roms .book .images {
+    width: 160px; }
 
 .clear {
   clear: both; }
