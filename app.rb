@@ -4,6 +4,10 @@ require_relative 'loader'
 set :views, Proc.new { File.join(root, "views") }
 
 get "/" do
+	erb :start
+end
+
+get "/generate" do
 	
 	["rom1,snes,TxtParser", "rom2,snes,TxtParser", "rom3,snes,TxtParser"].each do |c|
 		data = c.split(",")

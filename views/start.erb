@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<script src="/javascript/jquery.js"></script>
+		<script src="/javascript/rails.js"></script>
+		<script src="/javascript/layout.js"></script>
+		<link href="/stylesheet/layout.css" media="all" rel="stylesheet" type="text/css"></link>
+
+		<style>
+		  .generate-button {
+		    display: block;
+        text-align: center;
+        padding: 25px;
+        width: 280px;
+        margin: 0 auto;
+        background-color: #ccc;
+        border-radius: 12px;
+        text-decoration: none;
+        font-size: 24px;
+        box-shadow: 7px 7px 0px 0px rgba(50, 50, 50, 0.51);
+        color: #444;
+		  }
+
+		  .generate-button:hover {
+		    background-color:#e2e2e2;
+		    color:#000;
+		  }
+
+		  .generate-button:active {
+		    position:relative;
+		    top:5px;
+		    left:5px;
+		    color:#373737;
+		    background-color:#b6b6b6;
+		    box-shadow:inset 3px 3px 5px 1px rgba(0, 0, 0, 0.38);;
+		  }
+		</style>
+	</head>
+
+	<body>
+		<div class="logo">
+			<img src="/images/logo.png" />
+		</div>
+
+		<h1>Click to generate a new challenge</h1>
+
+		<div class="roms">
+		  <a href="/generate" class="generate-button">GENERATE CHALLENGE</a>
+		</div>
+	</body>
+</html>
